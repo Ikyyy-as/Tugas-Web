@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata, Kontak & Galeri - Ricky Aditya</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .card {
+            background: #ffffff;
+            padding: 35px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            max-width: 650px;
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        .card img.profile-img {
+            width: 130px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid #e2e8f0;
+            margin-bottom: 20px;
+        }
+        .card h1, .card h2 {
+            font-size: 22px;
+            color: #2d3748;
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .info-table {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .info-table, 
+        .info-table th, 
+        .info-table td {
+            border: 1px solid #333333;
+        }
+        .info-table td {
+            padding: 10px 12px;
+            font-size: 14px;
+            color: #2d3748;
+            vertical-align: top;
+        }
+        .info-table td.label {
+            font-weight: 600;
+            width: 110px;
+        }
+        .info-table td.separator {
+            width: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease-in-out;
+        }
+        .social-link:last-child {
+            margin-bottom: 0;
+        }
+        .whatsapp {
+            background-color: #25D366;
+            color: #ffffff;
+        }
+        .whatsapp:hover {
+            background-color: #1ebc57;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+        .instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #ffffff;
+        }
+        .instagram:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 39, 67, 0.3);
+        }
+        .email {
+            background-color: #ea4335;
+            color: #ffffff;
+        }
+        .email:hover {
+            background-color: #d33426;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(234, 67, 53, 0.3);
+        }
+
+        .gallery-card {
+            max-width: 650px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .photo-item {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 11;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+        }
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-grid .photo-item:nth-child(1) img {
+            object-position: center 50%; 
+        }
+
+        .gallery-grid .photo-item:nth-child(2) img {
+            object-position: center 50%; 
+        }
+
+        .gallery-grid .photo-item:nth-child(3) img {
+            object-position: center 75%; 
+        }
+
+        .gallery-grid .photo-item:nth-child(4) img {
+            object-position: center 50%; 
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .photo-item:active img {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 500px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="foto_biodata.jpg" alt="Foto Ricky Aditya" class="profile-img">
+        <h1>BIODATA</h1>
+        
+        <table class="info-table">
+            <tr>
+                <td class="label">Nama</td>
+                <td class="separator">:</td>
+                <td>Ricky Aditya</td>
+            </tr>
+            <tr>
+                <td class="label">NPM</td>
+                <td class="separator">:</td>
+                <td>21124216</td>
+            </tr>
+            <tr>
+                <td class="label">Kelas</td>
+                <td class="separator">:</td>
+                <td>3KB05</td>
+            </tr>
+            <tr>
+                <td class="label">Jurusan</td>
+                <td class="separator">:</td>
+                <td>Sistem Komputer</td>
+            </tr>
+            <tr>
+                <td class="label">Fakultas</td>
+                <td class="separator">:</td>
+                <td>Ilmu Komputer dan Teknologi Informasi</td>
+            </tr>
+            <tr>
+                <td class="label">Universitas</td>
+                <td class="separator">:</td>
+                <td>Universitas Gunadarma</td>
+            </tr>
+            <tr>
+                <td class="label">Alamat</td>
+                <td class="separator">:</td>
+                <td>Gang Kenanga Kec. Sepatan Timur Desa Lebak Wangi RT/RW : 02/07 Kota Tangerang</td>
+            </tr>
+            <tr>
+                <td class="label">Hobi</td>
+                <td class="separator">:</td>
+                <td>Tidur</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>HUBUNGI SAYA</h2>
+
+        <a href="https://wa.me/6281586154418?text=Halo Ricky" target="_blank" class="social-link whatsapp">
+            Hubungi via WhatsApp
+        </a>
+
+        <a href="https://instagram.com/kyy77_aditya" target="_blank" class="social-link instagram">
+            Hubungi Via Instagram
+        </a>
+    </div>
+
+    <div class="card gallery-card">
+        <h2>FOTO BERSAMA TEMAN</h2>
+
+        <div class="gallery-grid">
+            <div class="photo-item">
+                <img src="foto_1.jpg" alt="Foto Bersama Teman 1">
+            </div>
+            <div class="photo-item">
+                <img src="foto_2.jpg" alt="Foto Bersama Teman 2">
+            </div>
+            <div class="photo-item">
+                <img src="foto_3.jpg" alt="Foto Bersama Teman 3">
+            </div>
+            <div class="photo-item">
+                <img src="foto_4.jpg" alt="Foto Bersama Teman 4">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="padding: 20px;">
+        <h2 style="font-size: 16px; margin-bottom: 10px;">🎵 MUSIK </h2>
+        <audio autoplay loop controls style="width: 100%;">
+            <source src="lagu_1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+</body>
+</html>
